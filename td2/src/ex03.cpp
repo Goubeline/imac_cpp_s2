@@ -67,7 +67,7 @@ std::optional<std::vector<Token>> tokenize(std::vector<std::string> const& words
     return tokens;
 }
 
-bool operator_priority(std::vector<Token> npi, std::stack<Token>& ope_stack, Token& op)
+bool operator_priority(std::vector<Token>& npi, std::stack<Token>& ope_stack, Token& op)
 {
     if (std::get<Operator>(op.element) == Operator::CLOSE_PAREN)
     {
